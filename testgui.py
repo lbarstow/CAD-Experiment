@@ -8,7 +8,7 @@ class MyFirstGUI:
         self.label = Label(master, text="Enter the Name You Want Printed:")
         self.label.pack()
 
-        self.name = StringVar()
+        self.name = ""
         self.name_length = 0
 
         self.name_entry_text = StringVar()
@@ -35,7 +35,7 @@ class MyFirstGUI:
     def submit_name(self):
         self.name_length = len(self.name_entry.get())
         print(self.name_length)
-        self.name.set(self.name_entry.get())
+        self.name = self.name_entry.get()
         self.name_label_text.set("Name: " + self.name.get())
 
 root = Tk()
